@@ -288,7 +288,7 @@ background:"linear-gradient(to right,#CB4E38,rgba(255,255,255,0) 90%)",cover:"my
 background:"linear-gradient(to right,#040E06,rgba(255,255,255,0) 90%)",cover:"numberkari"},
 {name:"Choo Lo",artist:'The Local Train',
 background:"linear-gradient(to right,#C1102A,rgba(255,255,255,0) 90%)",cover:"choolo"},
-{name:"How Much a Dollar Cost",artist:'Kendric Lamar',
+{name:"How Much A Dollar Cost",artist:'Kendric Lamar',
 background:"linear-gradient(to right,#B6B4B5,rgba(255,255,255,0) 90%)",cover:"pimp"},
 {name:"Reborn",artist:'Kanye West, Kid Cudi',
 background:"linear-gradient(to right,#E94965,rgba(255,255,255,0) 90%)",cover:"reborn"},
