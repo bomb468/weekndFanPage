@@ -1,0 +1,1607 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  width: 100%;
+}
+body{
+  background: linear-gradient(to bottom,black 30%,#0c1b2c 50%,black 60%,#0c1b2c 100%);
+  color: #fff;
+  position: relative;
+  animation: scroll 0.6s ease;
+  width: 100%;
+}
+.albumBio>a{
+  text-decoration: underline;
+}
+a{
+  text-decoration: none;
+  color: #DDD;
+}
+a:hover{
+  color: #ddd;
+}
+.hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+.visible{
+  opacity: 1;
+  pointer-events: all;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.header{
+  font-size: 30px;
+}
+/*Navbar*/
+
+#theWeeknd{
+  margin-left: 15px;
+  margin-right: 5px;
+  height: 100px;
+}
+#title{
+  font-size: 20px;
+}
+#navbar{
+  justify-content: space-between;
+  margin: 1.5em 9em;
+  text-transform: uppercase;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+.hover-underline-animation:hover{
+  cursor: pointer;
+}
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: -8px;
+  left: 0;
+  background-color: #f2f2f2;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#sections{
+  justify-content: space-between;
+}
+.option{
+  margin: 0px 1em;
+}
+/*ImageSection*/
+#wholeImageSection{
+  flex-direction: column;
+  margin: 2.5em 9em;
+}
+#upperSection{
+  align-items: flex-end;
+  z-index: 2;
+}
+#image1{
+  height: 300px;
+}
+#image2{
+  height: 340px;
+}
+#lowerSection{
+  align-items: flex-start;
+}
+#image3{
+  height: 300px;
+}
+#video4{
+  height: 550px;
+  margin-top: -155px;
+}
+#image5{
+  height: 320px;
+}
+
+/*Latest Release Section*/
+
+#latestReleaseSection{
+  margin: 3em 9em;
+}
+
+/*Album Section*/
+
+#albums{
+  margin: 2.5em 10em;
+}
+
+#scroll{
+  max-height: 35em;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  margin: 2.5em 10em;
+}
+
+.albumImageSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.albumImage{
+  height: 16em;
+  border: 1px transparent;
+  border-radius: 5px;
+}
+
+.albumBio{
+  margin: 0px 30px;
+  padding: 5px 50px;
+  font-size: 17.5px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  overflow-y: scroll;
+  height: 100%;
+  max-height: 30em;
+}
+
+.album{
+  margin: 50px 0px;
+  height: 33em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  padding: 20px;
+  border: 1px transparent;
+  border-radius: 10px;
+  scroll-snap-align: start;
+}
+.albumBio>.explicit{
+  font-size: 17.5px;
+  background: rgba(255, 255, 255, .7);
+}
+
+.albumNameSection{
+  flex-direction: column;
+  margin: 20px 2px;
+  align-items: flex-start;
+}
+.albumName{
+  font-size: 18px;
+  font-weight: 500;
+}
+.albumNameDesc{
+  opacity: 0.7;
+}
+.albumList{
+  height: 100%;
+  max-height: 30em;
+  overflow-y: scroll;
+}
+.albumSong{
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  font-size: 13px;
+}
+.albumSong:hover{
+  background-color: #000;
+}
+.explicit{
+  font-size: 8px;
+  padding: 1px 5px;
+  margin-right: 7px;
+  margin-top: 2px;
+  background: #ddd;
+  color: #000;
+  border: 1px transparent;
+  border-radius: 2px;
+  font-weight: 500;
+}
+.albumSongNumber{
+  font-size: 17px;
+  opacity: 0.7;
+  justify-content: center;
+}
+.albumSongName{
+  font-size: 17px;
+}
+.albumSongArtist{
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+}
+
+/* Latest Release Section */
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100);
+
+#slideSection{
+  margin: 3em 10em;
+}
+#articleSection{
+  height: 525px;
+  margin-left: 50px;
+  padding: 0px 20px;
+  overflow-y: scroll;
+  color: #ddd;
+  transition: 1s all ease-in-out;
+}
+
+.articleTitle{
+  line-height: 1.2;
+  font-size: 23px;
+  padding: 13px 0px;
+}
+.articleText{
+  font-size: 15px;
+  opacity: 0.7;
+}
+.article{
+  margin: 20px 0px;
+  padding: 20px;
+  border: 1px;
+  border-radius: 5px;
+  margin-right: 30px;
+  background: #0c1b2c;
+}
+.second{
+  left: 200px;
+}
+.slider-wrap {
+  width: 600px;
+  height: 450px;
+  margin: 20px auto;
+  transition: all 0.4s ease;
+}
+.slider-wrap:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+#slider {
+  overflow-x: hidden;
+}
+.holder {
+  width: 300%;
+}
+.slide {
+  float: left;
+  width: 600px;
+  height: 450px;
+  position: relative;
+  background-position: -100px 0;
+  border: 1px transparent;
+  border-radius: 10px;
+}
+.temp {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  bottom: 50px;
+  left: 20px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 100;
+}
+.by{
+  position: absolute;
+  color: white;
+  font-size: 17px;
+  bottom: 20px;
+  left: 20px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+#slide-0 {
+  background-image: url(https://i.dailymail.co.uk/1s/2022/02/03/21/53748625-10474399-image-a-79_1643924786082.jpg);
+  object-fit: cover;
+  background-position: top 15% right 40%;
+}
+#slide-1 {
+  background-image: url(https://i.dailymail.co.uk/1s/2022/01/11/18/52805337-10391349-More_than_a_disagreement_The_Weeknd_took_self_loathing_to_a_whol-m-28_1641926459564.jpg);
+  background-position: top 15% right 40%;
+}
+#slide-2 {
+  background-image: url(https://i.dailymail.co.uk/1s/2022/01/08/18/52696309-10382027-image-a-35_1641665104120.jpg);
+  background-position: top 15% right 40%;
+}
+.slide:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(transparent, rgb(0, 0, 0));
+}
+.articleImg>img{
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+}
+
+/* Scroll Bar */
+#articleSection::-webkit-scrollbar-track
+{
+	border-radius: 20px;
+	background-color: rgba(185, 185, 185, 0);
+}
+
+#articleSection::-webkit-scrollbar{
+	width: 6px;
+	background-color: rgba(255,255,255,0);
+}
+
+#articleSection::-webkit-scrollbar-thumb{
+	border-radius: 20px;
+	background-color: rgba(225, 225, 225, 1);
+}
+
+#scroll::-webkit-scrollbar-track
+{
+	border-radius: 20px;
+	background-color: rgba(185, 185, 185, 0);
+}
+
+#scroll::-webkit-scrollbar{
+	width: 6px;
+	background-color: rgba(255,255,255,0);
+}
+
+#scroll::-webkit-scrollbar-thumb{
+	border-radius: 20px;
+	background-color: rgba(225, 225, 225, 1);
+}
+.albumBio::-webkit-scrollbar-track
+{
+	border-radius: 20px;
+	background-color: rgba(185, 185, 185, 0);
+}
+
+.albumBio::-webkit-scrollbar{
+	width: 6px;
+	background-color: rgba(255,255,255,0);
+}
+
+.albumBio::-webkit-scrollbar-thumb{
+	border-radius: 20px;
+	background-color: rgba(221, 221, 221, 1);
+}
+
+.typecardSongs::-webkit-scrollbar-track
+{
+	border-radius: 20px;
+	background-color: rgba(185, 185, 185, 0);
+}
+
+.typecardSongs::-webkit-scrollbar{
+	height: 6px;
+	background-color: rgba(255,255,255,0);
+}
+
+.typecardSongs::-webkit-scrollbar-thumb{
+	border-radius: 20px;
+	background-color: rgba(221, 221, 221, 1);
+}
+
+/* Biography Section */
+#biography{
+  margin: 2.5em 10em;
+}
+#bioContent{
+  position: relative;
+  height: 30em;
+  margin: 2.5em 10em;
+  background: linear-gradient(to left, transparent, rgb(0, 0, 0));
+  border: 1px transparent;
+  border-radius: 10px;
+}
+#bioSection{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  opacity: 0.5;
+  pointer-events: none;
+}
+#bioSectionImage>img{
+  height: 20em;
+  border: 1px transparent;
+  border-radius: 5px;
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0));
+}
+#bioSectionImage{
+  justify-content: center;
+}
+#bioParahContent{
+  flex-direction: column;
+  text-indent: 4em;
+  padding-left: 40px;
+  font-size: 19px;
+  background-color: transparent;
+  
+  /* Create the gradient. */
+  background-image: linear-gradient(#fff, rgba(0,0,0,0) 65%);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+#wikiJoke{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  transition: all 0.3s ease-in-out;
+}
+#wikiJoke:hover{
+  transform: scale(1.0125);
+}
+/* Remixes Section */
+
+#remixes{
+  margin: 2.5em 10em;
+}
+.typecard{
+  margin: 2.5em 10em;
+  height: 30em;
+  background: black;
+  border: 1px transparent;
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr 5fr;
+  padding: 0px 30px;
+  transition: all 0.5s ease;
+}
+.typecard:hover{
+  transform: scale(1.01);
+}
+.specialClassAdd{
+  scroll-snap-type: x mandatory;
+}
+.specialClassRemove{
+  scroll-snap-type: none;
+}
+.typecardSongs{
+  display: flex;
+  align-items: center;
+  max-width: 100em;
+  overflow-x: scroll;
+  animation: scroll 0.25s ease-in;
+}
+.typecardSong{
+  display: grid;
+  grid-template-rows: 5fr 1.5fr;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0px 57px;
+}
+.typecardSongImg>img{
+  height: 17em;
+  border: 1px transparent;
+  border-radius: 10px;
+}
+.typecardSongName{
+  font-size: 22px;
+}
+
+/* Jukebox */
+#slideButton{
+  position: fixed;
+  right: 50px;
+  top: 45px;
+  transition: all 0.25s ease;
+  z-index: 4;
+  border: 1px transparent;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 5px 5px 0px #000000, -5px -5px 0px grey;
+}
+#slideButton:active{
+  box-shadow: 0px 0px 0px #000000, 5px 5px 0px grey;
+  right: 55px;
+  top: 40px;
+}
+
+#slideButton>i{
+  width: 100%;
+  cursor: pointer;
+  color: white;
+}
+.jukeboxSection{
+  z-index: 3;
+  display: grid;
+  color: white;
+  width: 500px;
+  height: 100%;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  transition: 0.6s all;
+  background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1) 27%);
+}
+.rightNotZero{
+  right: -500px;
+}
+.rightZero{
+  right: 0;
+}
+#jukeboxUp{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 27vh;
+  justify-content: center;
+  background: linear-gradient(135deg, #4300ff 0%, #8c00ff 30%, #fff 110%);
+}
+#jukeboxUp::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+      0deg,
+      #000 0%,
+      rgba(0, 0, 0, .5) 12%,
+      rgba(0, 0, 0, .1) 30%,
+      rgba(0, 0, 0, 0) 40%
+  );
+}
+#jukeboxUp>.header{
+  z-index: 4;
+}
+#shuffle{
+  z-index: 4;
+  position: absolute;
+  bottom: -20px;
+  text-align: center;
+  border: 1px transparent;
+  border-radius: 30px;
+  background: #1ed760;
+  padding: 10px 30px;
+  color: #000;
+  font-weight: 650;
+  cursor: pointer;
+}
+#songlistJuke{
+  height: 70vh;
+  width: 100%;
+  z-index: 3;
+  margin-top: 30vh;
+  padding: 10px 0 8.5em 1.5em;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+#songlistJuke::-webkit-scrollbar-track
+{
+	border-radius: 20px;
+	background-color: rgba(185, 185, 185, 0);
+}
+
+#songlistJuke::-webkit-scrollbar{
+	width: 6px;
+	background-color: rgba(255,255,255,0);
+}
+
+#songlistJuke::-webkit-scrollbar-thumb{
+	border-radius: 20px;
+	background-color: rgba(225, 225, 225, 1);
+}
+
+.songJuke{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 5.25fr;
+  height: 60px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+.green{
+  color: #1ed760;
+  font-weight: 450;
+}
+.songImgJuke>img{
+  height: 60px;
+  width: 60px;
+}
+.songNameSectionJuke{
+  font-size: 19px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.songArtistNameJuke{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 325px;
+}
+.songNameJuke{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 325px;
+}
+.songArtistNameJuke>.explicit{
+  font-size: 9px;
+  margin-top: 0;
+  margin-right: 5px;
+  font-weight: 700;
+}
+#songArtistNameController>.explicit{
+  font-size: 11px;
+  margin-top: 0px;
+  margin-right: 5px;
+  font-weight: 700;
+}
+.songAddCustom{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0,-50%);
+  width: 50px;
+  height: 50px;
+}
+.songAddCustom>.fa-bars{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 22px;
+}
+.songAddCustom>.fa-plus{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(125%,-110%);
+  font-size: 12px;
+}
+.removeFromPlaylist{
+  color: #f2f2f2;
+}
+.addToPlaylist{
+  color: #1ed760;
+}
+#jukeboxDown{
+  color: #000;
+  z-index: 4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+}
+#controllerDown{
+  position: relative;
+  width: 100%;
+}
+#jukeboxController{
+  position: relative;
+  /*background: linear-gradient(to right,#123A49,rgba(0,0,0,0));*/
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  z-index: 4;
+}
+.img-container{
+  height: 50px;
+  width: 50px;
+}
+.img-container img{
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.music-info{
+  padding: 0px 10px;
+}
+#songNameController{
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+#songArtistNameController{
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.7;
+  margin-top: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+.navigation{
+  position: absolute;
+  right: 60px;
+  margin: 0px 10px;
+}
+.action-btn{
+  color: #fff;
+  border:0;
+  background: none;
+  font-size: 25px;
+  padding: 0 10px;
+}
+.action-btn-big{
+  font-size: 30px;
+  width: 50px;
+}
+.progress-container{
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  height: 3px;
+  width: calc(100% - 20px);
+  background: linear-gradient(to right,rgba(165, 165, 165, 0.25),rgba(160, 160, 160, 0.25));
+  border-radius: 5px;
+}
+.Progress{
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  transition: width 0.1s linear;
+}
+.progress-container:hover{
+  cursor: pointer;
+}
+#jukeboxSections{
+  z-index: 4;
+  height: 70px;
+  justify-content: space-evenly;
+  color: #ddd;
+  background: linear-gradient(to left,rgba(0, 0, 0, 0.5),rgba(0,0,0,0.95));
+}
+#songsSection,#playlistSection{
+  z-index: 5;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+}
+#songsSection:hover,#playlistSection:hover{
+  cursor: pointer;
+}
+#songsSection>i,#playlistSection>i{
+  font-size: 25px;
+  margin-bottom: 3px;
+  margin-top: 5px;
+}
+/* PlayList Section */
+#playlistUp{
+  height: 100%;
+  width: 100%;
+}
+#playlistTitle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  font-size: 30px;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom,#ff053f,#000 100%);
+}
+#playlistsSection{
+  position: absolute;
+  left: 0;
+  top: 15vh;
+  z-index: 3;
+  display: flex;
+  width: 100%;
+  height: 85vh;
+  overflow: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 7.5px 0;
+  background: black;
+}
+.playlist{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 6fr 0.5fr;
+  align-items: center;
+  justify-content: center;
+  padding: 7.5px 0;
+  cursor: pointer;
+}
+.playlistImage>.fa{
+  font-size: 22px;
+  color: rgb(240, 240, 240);
+  border-radius: 50%;
+}
+.playlistImage{
+  justify-content: center;
+}
+.playlistImage>img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.playlistName{
+  font-size: 20px;
+  padding-top: 5px;
+}
+.playlistSongsNumber{
+  font-size: 14px;
+  opacity: 0.7;
+  padding-bottom: 5px;
+}
+/* Volume div */
+#volumeDiv{
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  height: 25vh;
+  width: 40px;
+  transform: translate(0,-50%);
+  background: #fff;
+  border: #fff solid 1.5px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 4;
+  transition: opacity 0.2s ease-in-out;
+}
+#volume{
+  position: absolute;
+  left: 50%;
+  transform: translate(-52.5%,0%);
+  top: 0;
+  height: 50%;
+  width: 105%;
+  background: white;
+  transition: height 0.25s ease-in-out;
+}
+#volumeContainer{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  background: linear-gradient(0deg, rgb(150, 178, 255) 0%, #0077ff 25%, rgb(255, 45, 80) 100%);
+}
+#volumeContainer>i{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  bottom: 15px;
+  font-size: 17.5px;
+  color: white;
+}
+.volumeMid{
+  background-image: url('../assets/images/volumemidImage.png');
+  object-fit: contain;
+  height: 50px;
+  width: 50px;
+}
+/* Volume Icon */
+#bolume{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0,-45%);
+}
+#box{
+  position: relative;
+  height: 35px;
+  width: 35px;
+  background: transparent;
+  z-index: -1;
+  padding-top: 10px;
+}
+#finalCircle,#hugeCircle,#biggestCircle,#bigCircle,#mediumCircle,#smallCircle,#smallestCircle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#smallestCircle{
+  background: black;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  z-index: 5;
+}
+#smallCircle{
+  background: white;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  z-index: 4;
+}
+#mediumCircle{
+  background: black;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  z-index: 3;
+}
+#bigCircle{
+  background: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  z-index: 2;
+}
+#biggestCircle{
+  background: black;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  z-index: 1;
+}
+#hugeCircle{
+  background: white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  z-index: 0;
+}
+#finalCircle{
+  background: black;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  z-index: -1;
+}
+#block{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(to right,rgba(0,0,0,0) 10%,black 25%);
+}
+#volumeicon{
+  font-size: 35px;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-80%);
+  color: white;
+}
+/* Footer */
+footer{
+  height: 125px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+#footerSection{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 5fr 3fr;
+  padding: 0 10em;
+}
+#footerSection>.footerText{
+  text-align: start;
+  font-size: 20px;
+}
+.footerText{
+  text-align: center;
+  font-size: medium;
+  padding-left: 0;
+}
+#footerWrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.footerLink{
+  text-decoration: none;
+  color: inherit;
+  margin: 0px 10px;
+  font-size: 20px;
+}
+.footerLink>i{
+  font-size: 20px;
+  padding-right: 5px;
+}
+.footerLink>.option{
+  margin: 0;
+}
+.footerLink:hover{
+  color: #f2f2f2;
+}
+#footerText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerText>i{
+  color: #ff053f;
+  padding: 0 2.5px;
+  animation: pound 0.35s infinite alternate;
+}
+@-webkit-keyframes pound{
+  to{
+    transform: scale(1.1);
+  }
+}
+@keyframes pound{
+  to{
+    transform: scale(1.1);
+  }
+}
+@media (max-width: 1600px){
+  #slideSection{
+    margin: 1.5em 5em;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: space-evenly;
+  }
+}
+/* Resposive code */
+@media (max-width: 1200px){
+  #navbar{
+    margin:1.5em 5em;
+    font-size: 14.25px;
+  }
+  .option{
+    margin: 0 0.6em;
+  }
+  #title{
+    font-size: 17px;
+  }
+  #theWeeknd{
+    height: 90px;
+  }
+  #slideButtom:active,#slideButton{
+    right: 20px !important;
+    top: 45px !important;
+  }
+  #image1,#image3{
+    height: 230px;
+  }
+  #image2{
+    height: 300px;
+  }
+  #video4{
+    height: 350px;
+    margin-top: -52px;
+  }
+  #image5{
+    height: 260px;
+  }
+  /* Latest Release Section */
+  #latestReleaseSection{
+    margin: 1.5em 5em;
+  }
+  #articleSection{
+    height: 430px;
+    padding: 10px 10px;
+  }
+  /* Album Section / Specials */
+  #albums{
+    margin: 2.5em 5em;
+  }
+  #scroll{
+    margin: 2.5em 5em;
+  }
+  .albumImage{
+    height: 14em;
+  }
+  .album{
+    padding-right: 0;
+  }
+  /* Remixes */
+  #remixes{
+    margin: 2.5em 5em;
+  }
+  .typecard{
+    margin: 2.5em 5em;
+  }
+  .typecardSongs{
+    max-width: 60em;
+  }
+  .typecardSong{
+    padding: 0 40px;
+  }
+  .typecardSongImg>img{
+    height: 15em;
+  }
+  /* Biography */
+  #biography{
+    margin: 2.5em 5em;
+  }
+  #bioContent{
+    margin: 2.5em 5em;
+  }
+  /* footer */
+  #footerSection{
+    padding: 0 5em;
+  }
+  .footerLink>i{
+    font-size: 19px;
+  }
+  .footerLink{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+  }
+  #footerSection>.footerText{
+    font-size: 18px;
+  }
+}
+@media (max-width: 1000px){
+  #navbar{
+    display: grid !important;
+    grid-template-columns: 1fr 1.25fr;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0;
+    padding:1.5em 2.5em;
+    font-size: 17px;
+  }
+  #sections{
+    width: 350px;
+  }
+  .option{
+    margin: 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100px;
+  }
+  #title{
+    font-size: 19px;
+  }
+  #theWeeknd{
+    height: 110px;
+  }
+  #slideButtom:active,#slideButton{
+    right: 20px !important;
+  }
+  #wholeImageSection{
+    width: 100%;
+    justify-content: center;
+    margin: 5em 0em;
+  }
+  #image1,#image3{
+    align-items: center;
+  }
+  #image1{
+    height: 180px;
+  }
+  #image3{
+    height: 150px;
+  }
+  #image2{
+    height: 200px;
+  }
+  #video4{
+    width: 500px;
+    margin-top: -72px;
+  }
+  #image5{
+    height: 160px;
+    margin-top: -105px;
+  }
+  #lowerSection>.flex{
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  #lowerSection{
+    display: grid !important;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr 0.25fr;
+  }
+  /* Latest Release Section */
+  #latestReleaseSection{
+    margin: 1.5em 5em;
+  }
+  #slideSection{
+    margin: 0em 0em;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: space-evenly;
+  }
+  #articleSection{
+    height: 495px;
+    padding: 0;
+    margin-left: 0;
+  }
+  .article{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  /* Album Section / Specials */
+  #albums{
+    margin: 1.5em 5em;
+  }
+  #scroll{
+    margin: 1.5em 0em;
+  }
+  .albumImage{
+    height: 10em;
+  }
+  .album{
+    padding-right: 0;
+  }
+  .albumBio{
+    padding: 5px 25px;
+    margin: 0 15px;
+    font-size: 16px;
+  }
+  .albumBio>.explicit{
+    font-size: 16px;
+  }
+  .albumName{
+    font-size: 17px;
+  }
+  .albumNameDesc{
+    font-size: 15px;
+  }
+  /* Remixes */
+  #remixes{
+    margin: 2.5em 2.5em;
+  }
+  .typecard{
+    height: 33em;
+    margin: 2.5em 2.5em;
+    grid-template-rows: 0.75fr 3fr;
+  }
+  .typecardSongs{
+    max-width: 60em;
+  }
+  .typecardSong{
+    padding: 15px 30px;
+  }
+  .typecardSongImg>img{
+    height: 17em;
+  }
+  /* Biography */
+  #biography{
+    margin: 2.5em 2.5em;
+  }
+  #bioContent{
+    margin: 2.5em 0em;
+  }
+  /* footer */
+  #wikiJoke{
+    font-size: 28px;
+  }
+  #bioParahContent{
+    font-size: 15px;
+    padding-top: 10px;
+  }
+  #bioSectionImage>img{
+    height: 15em;    
+  }
+  #footerSection{
+    padding: 0 1.5em;
+  }
+  .footerLink>i{
+    font-size: 14px;
+  }
+  #footerWrapper{
+    padding-left: 10px;
+  }
+  .footerLink{
+    font-size: 13px;
+    margin: 0;
+  }
+  .footerLink>.option{
+    width: 65px;
+  }
+  #footerSection>.footerText{
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px){
+  /*shuffleplay*/
+  .rightNotZero{
+    right: -100%;
+  }
+  .jukeboxSection{
+    width: 100%
+  }
+  .songImgJuke>img{
+    height: 50px;
+    width: 50px;
+  }
+  .songImgJuke{
+    padding-right: 10px;
+  }
+  .songJuke{
+    grid-template-columns: 1fr 5.75fr;
+  }
+  .songNameSectionJuke{
+    width: 200px;
+  }
+  .songArtistNameJuke{
+    font-size: 13px;
+    width: 200px;
+  }
+  .navigation{
+    margin: 0 10px;
+  }
+  #songNameController{
+    width: 105px;
+  }
+  #songArtistNameController{
+    width: 105px;
+  }
+  .songArtistNameJuke>.explicit{
+    font-size: 8px;
+  }
+  .songNameJuke{
+    font-size: 17px;
+    width: 200px;
+  }
+  #songlistJuke{
+    height: auto;
+  }/*Navbar*/
+  #navbar{
+    display: grid !important;
+    grid-template-columns: 1.25fr 1fr;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0;
+    padding: 1.5em 1em;
+    font-size: 17px;
+  }
+  #sections{
+    display: none;
+    width: 150px;
+    margin-right: 0px;
+  }
+  .option{
+    margin: 0 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 35px;
+  }
+  #title{
+    font-size: 13px;
+  }
+  #theWeeknd{
+    margin-left: 10px;
+    margin-right: 0;
+    height: 80px;
+  }
+  #slideButtom:active,#slideButton{
+    right: 20px !important;
+  }
+  #wholeImageSection{
+    width: 100%;
+    justify-content: center;
+    margin: 0em 0em 5em 0em;
+  }
+  #image1{
+    height: 150px;
+  }
+  #image1,#image3{
+    align-items: center;
+  }
+  #image3{
+    display: none;
+    height: 75px;
+  }
+  #image2{
+    height: 175px;
+  }
+  #video4{
+    width: 250px;
+    height: 250px;
+    margin-top: -75px;
+  }
+  #image5{
+    position: absolute;
+    top:208px;
+    left: 125px;
+    height: 160px;
+  }
+  #lowerSection>.flex{
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  #upperSection{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  #lowerSection{
+    position: relative;
+    grid-template-columns: 0.25fr 1fr;
+  }
+  /* Latest Release Section */
+  .header{
+    font-size: 25px;
+  }
+  #latestReleaseSection{
+    margin: 1.5em 0em;
+  }
+  .header{
+    margin: 0 1em;
+  }
+  #slideSection{
+    margin: 1em 1em;
+    flex-direction: column;
+    width: 95%;
+    height: 950px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .slider-wrap{
+    width: 300px;
+    height: 300px;
+    margin: 10px 5px;
+  }
+  .slide{
+    width: 300px;
+    height: 300px;
+  }
+  .temp{
+    font-size: 22px;
+  }
+  .by{
+    font-size: 15px;
+  }
+  #articleSection{
+    height: 575px;
+    padding: 0;
+    margin-left: 0;
+  }
+  .article{
+    height: 275px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .articleTitle{
+    padding: 10px 0;
+  }
+  .articleText{
+    font-size: 13px !important;
+  }
+  .articleInfo>section{
+    font-size: 15px;
+    width: 150px;
+  }
+  .articleImg>img{
+    width: 125px;
+    height: 125px;
+  }
+  /* Album Section / Specials */
+  #albums{
+    margin: 1em 0em;
+  }
+  #scroll{
+    margin: 1em 1em;
+    height: 30em;
+  }
+  .albumImage{
+    height: 6em;
+  }
+  .album{
+    padding-right: 0;
+    height: 28em;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .albumBio{
+    padding: 0px 15px;
+    margin: 0 10px;
+    font-size: 12px;
+  }
+  .albumBio>.explicit{
+    font-size: 12px;
+  }
+  .albumName{
+    font-size: 13px;
+  }
+  .albumNameSection{
+    margin: 10px 2px;
+  }
+  .albumNameDesc{
+    font-size: 11px;
+  }
+  /* Remixes */
+  #remixes{
+    margin: 1.5em 0em;
+  }
+  .typecard{
+    height: 22em;
+    margin: 1.5em 1em;
+    grid-template-rows: 0.75fr 3fr;
+  }
+  .typecard>.header{
+    margin: 0 0;
+  }
+  .typecardSongs{
+    max-width: 120em;
+  }
+  .typecardSong{
+    padding: 10px 15px;
+  }
+  .typecardSongName{
+    font-size: 18px;
+  }
+  .typecardSongImg>img{
+    height: 10em;
+  }
+  /* Biography */
+  #biography{
+    margin: 1.5em 0em;
+  }
+  #bioContent{
+    height: 25em;
+    margin: 1.5em 1em;
+  }
+  #bioParahContent{
+    font-size: 10px;
+    padding-left: 15px;
+  }
+  #wikiJoke{
+    font-size: 20px;
+    padding-left: 20px;
+  }
+  #bioSectionImage>img{
+    height: 8em;    
+  }
+  /* footer */
+  #footerSection{
+    padding: 0 1em;
+  }
+  .footerLink>i{
+    font-size: 13px;
+  }
+  .footerLink{
+    font-size: 0px;
+  }
+  .footerLink>.option{
+    width: 15px;
+  }
+  #footerSection>.footerText{
+    font-size: 12px;
+  }
+  .footerText{
+    font-size: 12px;
+  }
+}
