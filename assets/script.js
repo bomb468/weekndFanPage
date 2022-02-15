@@ -24,7 +24,7 @@ scrollDown[4].addEventListener('click',()=>{
     document.querySelector('html').scrollTop="4500";
 })
 function switch1(){
-    listOfNames=['afterHours','afterhours(2)','weeknd-reacts']
+    listOfNames=['afterHours','afterHours(2)','weeknd-reacts']
     document.getElementById("image1").src="../assets/images/"+listOfNames[getRandomInt(0, 3)]+".jpg";
 }
 
@@ -59,11 +59,11 @@ let interval2;
 function switchl(){
     clearInterval(interval2);
     if (!f){
-        $("#slider").animate({ scrollLeft: 600 }, "slow");
+        $("#slider").animate({ scrollLeft: parseInt(document.getElementsByClassName("slider")[0].offsetWidth) }, "slow");
         su=false;
         f=true;
     }else if (!su){
-        $("#slider").animate({ scrollLeft: 1200 }, "slow");
+        $("#slider").animate({ scrollLeft: 2*parseInt(document.getElementsByClassName("slider")[0].offsetWidth) }, "slow");
         su=true;
         t=false;
     }else{
@@ -85,7 +85,7 @@ function scrollHorizontally1(e) {
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
     var scrollSpeed = 60; // Janky jank <<<<<<<<<<<<<<
     if (delta*scrollSpeed>0){
-        $(scrollContainer[0]).animate({ scrollLeft: 570 }, "slow");
+        $(scrollContainer[0]).animate({ scrollLeft: parseInt(document.getElementsByClassName("typecardSong")[0].offsetWidth) }, "slow");
     }else{
         $(scrollContainer[0]).animate({ scrollLeft: 0 }, "slow");
     }
@@ -98,7 +98,7 @@ function scrollHorizontally2(e) {
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
     var scrollSpeed = 60; // Janky jank <<<<<<<<<<<<<<
     if (delta*scrollSpeed>0){
-        $(scrollContainer[1]).animate({ scrollLeft: 570 }, "slow");
+        $(scrollContainer[1]).animate({ scrollLeft: parseInt(document.getElementsByClassName("typecardSong")[0].offsetWidth) }, "slow");
     }else{
         $(scrollContainer[1]).animate({ scrollLeft: 0 }, "slow");
     }
@@ -111,7 +111,7 @@ function scrollHorizontally3(e) {
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
     var scrollSpeed = 60; // Janky jank <<<<<<<<<<<<<<
     if (delta*scrollSpeed>0){
-        $(scrollContainer[2]).animate({ scrollLeft: 570 }, "slow");
+        $(scrollContainer[2]).animate({ scrollLeft: parseInt(document.getElementsByClassName("typecardSong")[0].offsetWidth) }, "slow");
     }else{
         $(scrollContainer[2]).animate({ scrollLeft: 0 }, "slow");
     }
@@ -197,33 +197,33 @@ background:"linear-gradient(to right,#123A49,rgba(0,0,0,0.95) 90%)",cover:"dawnF
 {name:"Phantom Regret By Jim",artist:'The Weeknd',
 background:"linear-gradient(to right,#123A49,rgba(0,0,0,0.95) 90%)",cover:"dawnFM"},
 {name:'Alone Again',artist:"<span class='explicit'>E</span>The Weeknd",
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Too Late',artist:'<span class="explicit">E</span>The Weeknd',
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Hardest To Love',artist:'<span class="explicit">E</span>The Weeknd',
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Scared To Live',artist:"<span class='explicit'>E</span>The Weeknd",
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Snowchild',artist:'<span class="explicit">E</span>The Weeknd',
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Escape From LA',artist:'<span class="explicit">E</span>The Weeknd',
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Heartless',artist:"<span class='explicit'>E</span>The Weeknd",
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Faith',artist:'<span class="explicit">E</span>The Weeknd',
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Blinding Lights',artist:'The Weeknd',
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'In Your Eyes',artist:"The Weeknd",
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Save Your Tears',artist:'<span class="explicit">E</span>The Weeknd',
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Repeat After Me (Interlude)',artist:'<span class="explicit">E</span>The Weeknd',
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'After Hours',artist:"The Weeknd",
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Until I Bleed Out',artist:'<span class="explicit">E</span>The Weeknd',
-background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterhours(2)"},
+background:"linear-gradient(to right,rgba(166, 64, 52, 0.95),rgba(0,0,0,0.95) 90%)",cover:"afterHours(2)"},
 {name:'Call Out My Name',artist:'The Weeknd',
 background:"linear-gradient(to right,rgba(178, 66, 26, 0.95),rgba(0,0,0,0.95) 90%)",cover:"MyDearMelancholy"},
 {name:'Try Me',artist:'The Weeknd',
@@ -272,23 +272,36 @@ background:"linear-gradient(to right,rgba(210, 1, 42, 0.95),rgba(0,0,0,0.95) 90%
 background:"linear-gradient(to right,rgba(210, 1, 42, 0.95),rgba(0,0,0,0.95) 90%)",cover:"starboy"},
 {name:'I Feel It Coming (Ft. Daft Punk)',artist:'The Weeknd, Daft Punk',
 background:"linear-gradient(to right,rgba(210, 1, 42, 0.95),rgba(0,0,0,0.95) 90%)",cover:"starboy"},
-{name:'Call Out My Name',artist:'The Weeknd',
-background:"linear-gradient(to right,rgba(178, 66, 26, 0.95),rgba(0,0,0,0.95) 90%)",cover:"MyDearMelancholy"},
-{name:"Can't Feel My Face",artist:'The Weeknd',
-background:"linear-gradient(to right,rgba(0, 0, 0, 0.95),rgba(0,0,0,0.95) 90%)",cover:"bbtm"},
-{name:'Reminder',artist:'<span class="explicit">E</span>The Weeknd',
-background:"linear-gradient(to right,rgba(210, 1, 42, 0.95),rgba(0,0,0,0.95) 90%)",cover:"starboy"},
-{name:"Often",artist:'The Weeknd',
-background:"linear-gradient(to right,rgba(0, 0, 0, 0.95),rgba(0,0,0,0.95) 90%)",cover:"bbtm"}
+{name:"Nights",artist:'Frank Ocean',
+background:"linear-gradient(to right,rgba(51,99,57,1),rgba(255,255,255,0) 110%)",cover:"nights"},
+{name:"Look At Me",artist:'Xxxtentacion',
+background:"linear-gradient(to right,#222222,rgba(255,255,255,0) 110%)",cover:"lookatme"},
+{name:"How(demo)",artist:'Clairo',
+background:"linear-gradient(to right,#358032,rgba(255,255,255,0) 110%)",cover:"how"},
+{name:"New Magic Wand",artist:'Tyler The Creator',
+background:"linear-gradient(to right,#f1adc3,rgba(255,255,255,0) 90%)",cover:"igor"},
+{name:"Home",artist:'Cavetown',
+background:"linear-gradient(to right,#4D2424,rgba(255,255,255,0) 90%)",cover:"home"},
+{name:"Mysight",artist:'Mild Orange',
+background:"linear-gradient(to right,#CB4E38,rgba(255,255,255,0) 90%)",cover:"mysight"},
+{name:"Numberkari",artist:'MC Stan',
+background:"linear-gradient(to right,#040E06,rgba(255,255,255,0) 90%)",cover:"numberkari"},
+{name:"Choo Lo",artist:'The Local Train',
+background:"linear-gradient(to right,#C1102A,rgba(255,255,255,0) 90%)",cover:"choolo"},
+{name:"How Much a Dollar Cost",artist:'Kendric Lamar',
+background:"linear-gradient(to right,#B6B4B5,rgba(255,255,255,0) 90%)",cover:"pimp"},
+{name:"Reborn",artist:'Kanye West, Kid Cudi',
+background:"linear-gradient(to right,#E94965,rgba(255,255,255,0) 90%)",cover:"reborn"},
 ]
 const PlaylistSongsindexes=[[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53],
 [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
 [16,17,18,19,20,21,22,23,24,25,26,27,28,29],
 [30,31,32,33,34,35],
-[36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53]];
+[36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53],
+[54,55,56,57,58,59,60,61,62,63]];
 let List
-if (!localStorage.customIndexes) {
-    //localStorage.customIndexes = JSON.stringify([]);
+if (!localStorage.customIndexes){
+    //localStorage.setItem('customIndexes',[]);
     List=[];
 }else{
     List=JSON.parse(localStorage.customIndexes);
@@ -300,12 +313,12 @@ for (let i=0;i<List.length;i++){
 }
 function updateCustomIndexes(){
     localStorage.setItem('customIndexes',JSON.stringify(List));
-    PlaylistSongsindexes[5]=List;
+    PlaylistSongsindexes[6]=List;
     updateCustomTrackNumber();
     // something remaining
-    if (playlistIndex==5){
+    if (playlistIndex==6){
         document.getElementById('songlistJuke').innerHTML="";
-        for (let i=0;i<PlaylistSongsindexes[5].length;i++){
+        for (let i=0;i<PlaylistSongsindexes[6].length;i++){
             let songDiv=document.createElement('div');
             songDiv.className="songJuke";
             let songImgDiv=document.createElement('div');
@@ -375,7 +388,7 @@ let songIndex=2;
 let playlistIndex=0;
 //initially load
 function loadSong(){
-    if (playlistIndex==5 && PlaylistSongsindexes[playlistIndex].length==0) return;
+    if (playlistIndex==6 && PlaylistSongsindexes[playlistIndex].length==0) return;
     songTitleController.innerText=allSongInfo[PlaylistSongsindexes[playlistIndex][songIndex]].name;
     songArtistNameController.innerHTML=allSongInfo[PlaylistSongsindexes[playlistIndex][songIndex]].artist;
     audioPlaying.src=`../assets/music/${allSongInfo[PlaylistSongsindexes[playlistIndex][songIndex]].name}.mp3`;
@@ -492,8 +505,8 @@ function loadPlaylist(){
         songAddCustom.className='songAddCustom';
         let bars=document.createElement('i');
         let plus=document.createElement('i');
-        for (let j=0;j<PlaylistSongsindexes[5].length;j++){
-            if (PlaylistSongsindexes[5][j]==PlaylistSongsindexes[playlistIndex][i]){
+        for (let j=0;j<PlaylistSongsindexes[6].length;j++){
+            if (PlaylistSongsindexes[6][j]==PlaylistSongsindexes[playlistIndex][i]){
                 bars.className="fa fa-bars addToPlaylist";
                 plus.className="fa fa-plus addToPlaylist";
                 break;
@@ -584,12 +597,12 @@ for (let i=0;i<PlaylistSongsindexes.length;i++){
     document.getElementsByClassName('playlist')[i].addEventListener('click',onclickPlaylist);
 }
 function updateCustomTrackNumber(){
-    if (PlaylistSongsindexes[5].length==1){
+    if (PlaylistSongsindexes[6].length==1){
         document.getElementById('customTrackNumber').parentNode.innerHTML="<span id='customTrackNumber'>1</span> Track";
     }else{
         document.getElementById('customTrackNumber').parentNode.innerHTML="<span id='customTrackNumber'>1</span> Tracks";
     }
-    document.getElementById('customTrackNumber').innerText=PlaylistSongsindexes[5].length;
+    document.getElementById('customTrackNumber').innerText=PlaylistSongsindexes[6].length;
 }
 updateCustomTrackNumber();
 function shuffle(array) {
@@ -610,7 +623,7 @@ document.getElementById('shuffle').addEventListener('click',()=>{
     loadPlaylist();
 })
 function playSong(){
-    if (playlistIndex==5 && PlaylistSongsindexes[playlistIndex].length==0){
+    if (playlistIndex==6 && PlaylistSongsindexes[playlistIndex].length==0){
         playlistIndex=0;
         loadPlaylist()
         playSong();
