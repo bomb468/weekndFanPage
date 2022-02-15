@@ -1353,7 +1353,7 @@ footer{
     width: 200px;
   }
   .songArtistNameJuke{
-    font-size: 11px;
+    font-size: 12px;
     width: 200px;
   }
   .navigation{
@@ -1361,15 +1361,17 @@ footer{
   }
   #songNameController{
     width: 105px;
+	  font-size: 17px;
   }
   #songArtistNameController{
+	font-size: 12px;
     width: 105px;
   }
   .songArtistNameJuke>.explicit{
     font-size: 8px;
   }
   .songNameJuke{
-    font-size: 15px;
+    font-size: 17px;
     width: 200px;
   }
   #songlistJuke{
