@@ -405,14 +405,6 @@ function loadSong(){
     }
     ListOfSongNamesForHighlight[songIndex].classList.add('green');
 }
-audioPlaying.addEventListener('load',()=>{
-    document.querySelector('.img-container img').style.opacity=1;
-    document.querySelector('#songNameController').style.opacity=1;
-    document.querySelector('#songArtistNameController').style.opacity=0.7;
-    document.querySelector('.navigation').style.opacity=1;
-    document.querySelector('#bolume').style.opacity=1;
-    document.querySelector('.Progress').style.opacity=1;
-})
 function onclickSong(e){
     if (e.srcElement.classList.contains('songNameSectionJuke') || e.srcElement.classList.contains('songAddCustom')){
         for (let i=0;i<document.getElementsByClassName('songNameJuke').length;i++){
@@ -676,6 +668,14 @@ function updateProgress(e){
     let {duration,currentTime}=e.srcElement;
     let progressPercentage=(currentTime/duration)*100;
     progressBar.style.width=`${progressPercentage}%`;
+    if (progressPercentage<2){
+        document.querySelector('.img-container img').style.opacity=1;
+        document.querySelector('#songNameController').style.opacity=1;
+        document.querySelector('#songArtistNameController').style.opacity=0.7;
+        document.querySelector('.navigation').style.opacity=1;
+        document.querySelector('#bolume').style.opacity=1;
+        document.querySelector('.Progress').style.opacity=1;
+    }
     if (progressPercentage==100){
         nextSong();
     }
