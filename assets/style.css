@@ -628,7 +628,6 @@ a:hover{
 }
 .songImgJuke>img{
   height: 60px;
-  width: 60px;
 }
 .songNameSectionJuke{
   font-size: 19px;
@@ -1361,18 +1360,26 @@ footer{
   }
   #songNameController{
     width: 105px;
-	  font-size: 17px;
+  }
+  #songNameController{
+    font-size: 16px;
   }
   #songArtistNameController{
-	font-size: 12px;
+    font-size: 12px;
     width: 105px;
   }
   .songArtistNameJuke>.explicit{
     font-size: 7px;
   }
   .songNameJuke{
-    font-size: 17px;
+    font-size: 16px;
     width: 200px;
+  }
+  .playlistName{
+    font-size: 16px;
+  }
+  .playlistSongsNumber{
+    font-size: 12px;
   }
   #songlistJuke{
     height: auto;
