@@ -629,12 +629,6 @@ document.getElementById('shuffle').addEventListener('click',()=>{
     loadPlaylist();
 })
 function playSong(){
-    document.querySelector('.img-container img').style.opacity=1;
-    document.querySelector('#songNameController').style.opacity=1;
-    document.querySelector('#songArtistNameController').style.opacity=0.7;
-    document.querySelector('.navigation').style.opacity=1;
-    document.querySelector('#bolume').style.opacity=1;
-    document.querySelector('.Progress').style.opacity=1;
     if (playlistIndex==6 && PlaylistSongsindexes[playlistIndex].length==0){
         playlistIndex=0;
         loadPlaylist()
@@ -671,6 +665,12 @@ function nextSong(){
     playSong();
 }
 function updateProgress(e){
+    document.querySelector('.img-container img').style.opacity=1;
+    document.querySelector('#songNameController').style.opacity=1;
+    document.querySelector('#songArtistNameController').style.opacity=0.7;
+    document.querySelector('.navigation').style.opacity=1;
+    document.querySelector('#bolume').style.opacity=1;
+    document.querySelector('.Progress').style.opacity=1;
     let {duration,currentTime}=e.srcElement;
     let progressPercentage=(currentTime/duration)*100;
     progressBar.style.width=`${progressPercentage}%`;
