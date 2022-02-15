@@ -388,6 +388,12 @@ let songIndex=2;
 let playlistIndex=0;
 //initially load
 function loadSong(){
+    document.querySelector('.img-container img').style.opacity=0.8;
+    document.querySelector('#songNameController').style.opacity=0.8;
+    document.querySelector('#songArtistNameController').style.opacity=0.5;
+    document.querySelector('.navigation').style.opacity=0.8;
+    document.querySelector('#bolume').style.opacity=0.8;
+    document.querySelector('.Progress').style.opacity=0.8;
     if (playlistIndex==6 && PlaylistSongsindexes[playlistIndex].length==0) return;
     songTitleController.innerText=allSongInfo[PlaylistSongsindexes[playlistIndex][songIndex]].name;
     songArtistNameController.innerHTML=allSongInfo[PlaylistSongsindexes[playlistIndex][songIndex]].artist;
@@ -623,6 +629,12 @@ document.getElementById('shuffle').addEventListener('click',()=>{
     loadPlaylist();
 })
 function playSong(){
+    document.querySelector('.img-container img').style.opacity=1;
+    document.querySelector('#songNameController').style.opacity=1;
+    document.querySelector('#songArtistNameController').style.opacity=0.7;
+    document.querySelector('.navigation').style.opacity=1;
+    document.querySelector('#bolume').style.opacity=1;
+    document.querySelector('.Progress').style.opacity=1;
     if (playlistIndex==6 && PlaylistSongsindexes[playlistIndex].length==0){
         playlistIndex=0;
         loadPlaylist()
