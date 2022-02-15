@@ -290,9 +290,7 @@ let List
 if (!localStorage.customIndexes) {
     //localStorage.customIndexes = JSON.stringify([]);
     List=[];
-    console.log('reached');
 }else{
-    console.log('not reached');
     List=JSON.parse(localStorage.customIndexes);
 }
 PlaylistSongsindexes.push(List);
