@@ -8,12 +8,20 @@ const port=process.env.PORT || 3000;
 const templatepath=path.join(__dirname,"../src/templates/views");
 const partialpath=path.join(__dirname,"../src/templates/partials");
 //middleware
-app.use('/assets',express.static('assets'));
+//app.use('/assets',express.static('assets'));
 app.use('/css',express.static(path.join(__dirname,"../node_modules/bootstrap/dist/css")));
 app.use('/js',express.static(path.join(__dirname,"../node_modules/bootstrap/dist/js")));
 app.use('/jq',express.static(path.join(__dirname,"../node_modules/jquery/dist")));
 var publicDir = require('path').join(__dirname,'/public'); 
 app.use(express.static(publicDir)); 
+
+app.use('/assets', express.static(path.join(__dirname, '../assets')));
+
+// 2. Serves files from /public folder (like /images)
+app.use('/public', express.static(path.join(__dirname, '../public')));
+
+// 3. Fallback for root files (optional but helpful)
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.set('views', templatepath);
 hbs.registerPartials(partialpath);
